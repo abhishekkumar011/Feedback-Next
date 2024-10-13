@@ -23,7 +23,7 @@ export default function verificationEmail({
       <Head>
         <title>Verification Code</title>
         <Font
-          fontFamily="Robot"
+          fontFamily="Roboto"
           fallbackFontFamily="Verdana"
           webFont={{
             url: "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",

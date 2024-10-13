@@ -4,7 +4,7 @@ import UserModel from "@/model/User.model";
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
 
 export async function POST(request: Request) {
-  dbConnect();
+  await dbConnect();
 
   try {
     const { username, email, password } = await request.json();
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       if (existingUserByEmail.isVerified) {
         return Response.json(
           {
-            Success: true,
+            Success: false,
             message: "User already exists with this email",
           },
           { status: 400 }
